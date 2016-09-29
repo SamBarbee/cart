@@ -1,0 +1,18 @@
+<div class="thumbnail">
+    <a href="{{ path_for('product.get', {slug: product.slug}) }}"><img src="{{ product.image }}" alt="{{ product.title }} image."></a>
+    <div class="caption">
+        <h4><a href="{{ path_for('product.get', {slug: product.slug}) }}">{{ product.title }}</a></h4>
+        <p>{{ product.price }}</p>
+        {% if product.inStock() %}
+          {% if product.hasLowStock() %}
+              <span class="label label-warning">Low Stock</span>
+          {% else %}
+              <span class="label label-success">In Stock</span>
+          {% endif %}
+        {% endif %}
+
+        {% if product.outOfStock() %}
+            <span class="label label-danger">Out of stock</span>
+        {% endif %}
+    </div>
+</div>
