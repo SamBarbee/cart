@@ -20,14 +20,6 @@
             <h3>{{ product.title() }}</h3>
             <p>{{ product.description }}</p>
 
-            <form action="{{ path_for('cart.add', { slug: product.slug, quantity:1}) }}" method="post" class="form-inline">
-                <select name="quantity" class="form-control input-sm" onchange="this.form.submit()>
-                    {% for num in 1..product.stock %}
-                        <option value="{{ num }}"{% if num == product.quantity %} selected="selected"{% endif %}>{{ num }}</option>
-                    {% endfor %}
-                </select>
-            </form>
-
             {% if product.inStock() %}
                 <a href="{{ path_for('cart.add', { slug: product.slug, quantity: 1 }) }}" class="btn btn-default btn-sm">Add to cart</a>
             {% endif %}
