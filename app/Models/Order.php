@@ -5,6 +5,7 @@ namespace Cart\Models;
 use Cart\Models\Product;
 use Cart\Models\Address;
 use Cart\Models\Payment;
+use Cart\Models\Customer;
 use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
@@ -19,6 +20,11 @@ class Order extends Model
     public function address()
     {
         return $this->belongsTo(Address::class);
+    }
+
+    public function customers()
+    {
+        return $this->belongsTo(Customer::class);
     }
 
     public function products()
