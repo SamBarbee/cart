@@ -28,9 +28,9 @@ $capsule->setAsGlobal();
 $capsule->bootEloquent();
 
 Braintree_Configuration::environment('sandbox');
-Braintree_Configuration::merchantId('MERCHANT_ID');
-Braintree_Configuration::publicKey('PUBLIC_KEY');
-Braintree_Configuration::privateKey('PRIVATE_KEY');
+Braintree_Configuration::merchantId('3p6pqq6f474hyddf');
+Braintree_Configuration::publicKey('pg8bs5fd6rvhcprj');
+Braintree_Configuration::privateKey('476839b201e7417150644c6621689a27');
 
 require __DIR__ . '/../app/routes.php';
 
