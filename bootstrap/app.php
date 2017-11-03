@@ -27,10 +27,10 @@ $capsule->addConnection([
 $capsule->setAsGlobal();
 $capsule->bootEloquent();
 
-Braintree_Configuration::environment('sandbox');
-Braintree_Configuration::merchantId('3p6pqq6f474hyddf');
-Braintree_Configuration::publicKey('pg8bs5fd6rvhcprj');
-Braintree_Configuration::privateKey('476839b201e7417150644c6621689a27');
+Braintree_Configuration::environment('');
+Braintree_Configuration::merchantId('');
+Braintree_Configuration::publicKey('');
+Braintree_Configuration::privateKey('');
 
 require __DIR__ . '/../app/routes.php';
 
